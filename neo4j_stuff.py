@@ -14,3 +14,6 @@ when s.age is null then [1]
 else [0] end as array
 foreach (x in array|merge (s)-[r:relationship]->(n) set s.age = 10)
 return n,s
+
+import 导入
+./neo4j-admin import --database=graph.db --nodes /state/heyang/virus_detec/code/build_tree/scv_node.csv  --relationships /state/heyang/virus_detec/code/build_tree/scv_relationship.csv
