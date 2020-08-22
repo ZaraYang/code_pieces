@@ -20,3 +20,7 @@ import 导入
 
 推荐内存配置
 ./neo4j-admin memrec --memory=64g
+
+
+match (n1:scv_node{node_id:'2_0'})-[r1:scv_bind{bind_type:'2'}]->(n2:scv_node)-[r2:scv_bind{bind_type:'6'}]->(n3:scv_node)
+return n1,n2,n3,r1,r2
