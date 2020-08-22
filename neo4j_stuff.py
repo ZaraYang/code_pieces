@@ -17,3 +17,6 @@ return n,s
 
 import 导入
 ./neo4j-admin import --database=graph.db --nodes /state/heyang/virus_detec/code/build_tree/scv_node.csv  --relationships /state/heyang/virus_detec/code/build_tree/scv_relationship.csv
+
+推荐内存配置
+./neo4j-admin memrec --memory=64g
