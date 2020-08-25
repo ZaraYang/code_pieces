@@ -24,3 +24,6 @@ import 导入
 
 match (n1:scv_node{node_id:'2_0'})-[r1:scv_bind{bind_type:'2'}]->(n2:scv_node)-[r2:scv_bind{bind_type:'6'}]->(n3:scv_node)
 return n1,n2,n3,r1,r2
+
+查看落单节点
+match(x:scv_node_0) where not (x)-[]-() return x
