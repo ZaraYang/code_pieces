@@ -30,3 +30,8 @@ match(x:scv_node_0) where not (x)-[]-() return x
 
 # 建立全文索引
 call db.index.fulltext.createNodeIndex('stop_list_index',["scv_leaf_0","scv_leaf_1","scv_leaf_2","scv_leaf_3","scv_leaf_4","scv_leaf_5","scv_leaf_6","scv_leaf_7","scv_leaf_8","scv_leaf_9","scv_leaf_10","scv_leaf_11","scv_leaf_12","scv_leaf_13","scv_leaf_14","scv_leaf_15"],["stoped_seq"])
+
+
+# 查找子结点大于2的结点,并返回子结点
+match (n:scv_0_2_3) where size((n)-[]-())>=2 
+return (n)-[]-() limit 100;
